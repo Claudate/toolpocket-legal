@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  ToolPocket 的公网落地页，只承载 App Store 提交需要的两个 URL（隐私政策、支持）。
+  单独做成静态页而不是引用 docs/*.md：App Store 的审核机器人要能直接打开 HTML，
+  仓库里的 Markdown 不经渲染对它是纯文本。发布方式见 docs/site/README.md。
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToolPocket</title>
+<style>
+  :root { --paper:#F7F5F0; --ink:#1E2420; --muted:#5C6660; --green:#2E6B4F; --line:#DDD8CE; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+         -webkit-font-smoothing:antialiased; min-height:100vh;
+         display:flex; align-items:center; justify-content:center; padding:48px 24px; }
+  main { max-width:560px; }
+  .mark { width:64px; height:64px; border-radius:16px; background:var(--green); color:var(--paper);
+          display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:700;
+          margin-bottom:28px; }
+  h1 { font-size:34px; line-height:1.15; letter-spacing:-.02em; margin:0 0 12px; }
+  .lead { color:var(--muted); font-size:18px; margin:0 0 36px; }
+  nav { display:flex; flex-direction:column; gap:12px; }
+  a.card { display:flex; justify-content:space-between; align-items:center; text-decoration:none;
+           color:var(--ink); border:1px solid var(--line); border-radius:14px; padding:16px 18px;
+           background:#FFFDF9; transition:border-color .2s ease, transform .2s ease; }
+  a.card:hover { border-color:var(--green); transform:translateY(-1px); }
+  a.card span { color:var(--muted); font-size:15px; }
+  footer { margin-top:44px; font-size:14px; color:var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark">T</div>
+  <h1>ToolPocket</h1>
+  <p class="lead">Tool inventory and loan tracking for iPhone. Everything stays on your device.</p>
+  <nav>
+    <a class="card" href="./privacy.html"><strong>Privacy Policy</strong><span>No data collected</span></a>
+    <a class="card" href="./support.html"><strong>Support</strong><span>Contact and FAQ</span></a>
+  </nav>
+  <footer>DIGITAL BANG INTELLIGENCE LLC · <a href="mailto:leo@dbi.ltd">leo@dbi.ltd</a></footer>
+</main>
+</body>
+</html>
